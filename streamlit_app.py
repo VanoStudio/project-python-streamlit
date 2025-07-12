@@ -5,6 +5,7 @@ if "page" not in st.session_state:
 
 def ganti_halaman(target):
     st.session_state.page = target
+    st.rerun()
 
 if st.session_state.page == "home":
 
@@ -13,10 +14,14 @@ if st.session_state.page == "home":
     Cara kerjanya simpel:\n
     👉 Tinggal klik-klik jawab soal survei absurd,\n
     👻 Nanti muncul khodam aneh yang cocok sama energi chaotic-mu.""")
-    nama = st.text_input("Sebelum itu, masukkan nama mu dulu", placeholder="Contoh: Fuad")
 
     if st.button("Mulai Survei"):
         ganti_halaman("halaman1")
 
+
 elif st.session_state.page == "halaman1":
     st.title("halaman soal nya")
+    
+
+    if st.button("Back"):
+        ganti_halaman("home")
