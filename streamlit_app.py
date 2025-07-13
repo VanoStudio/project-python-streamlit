@@ -22,11 +22,11 @@ if st.session_state.page == "home":
     4. Setelah semua terisi, BOOM 💥 kamu bakal dikasih tahu khodam aneh yang cocok sama getaran kamu.""")
 
     if st.button("Mulai Survei"):
-        ganti_halaman("halaman1")
+        ganti_halaman("soal1")
 # HALAMAN HOMEPAGE END
 
 # HALAMAN SOAL 1 START
-elif st.session_state.page == "halaman1":
+elif st.session_state.page == "soal1":
     st.title("SOAL 1")
     #MARKDOWN SOAL
     st.markdown("<div style='font-size:25px;margin-top:15px'>🧠Saat kamu dikasih uang 10 ribu di tengah gurun Sahara, apa yang kamu lakuin?</div>", unsafe_allow_html=True) 
@@ -45,7 +45,13 @@ elif st.session_state.page == "halaman1":
 # HALAMAN SOAL 1 END
     
     
+    col1,col2 = st.columns(2)
+    with col1:
+        if st.button("Back"):
+            ganti_halaman("home")
+    with col2:
+        if st.button("Next"):
+            ganti_halaman("soal2")
 
-    if st.button("Back"):
-        ganti_halaman("home")
-
+elif st.session_state.page == "soal2":
+    st.title("Soal 2")
