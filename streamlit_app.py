@@ -43,15 +43,62 @@ elif st.session_state.page == "soal1":
     """, unsafe_allow_html=True)
     jawaban = st.radio("",["🧃 Beli es teh manis padahal nggak ada warung, tapi kamu yakin bakal muncul sendiri.","🐍 Ngobrol sama ular pasir, tanya dia bisa transfer BCA nggak.","🛸 Lempar uangnya ke langit sambil teriak “AKU SIAP DIPILIH JADI UTUSAN GALAKSI!”"],label_visibility="collapsed")
 # HALAMAN SOAL 1 END
-    
-    
-    col1,col2 = st.columns(2)
+
+    col1,col2,col3 = st.columns(3)
     with col1:
         if st.button("Back"):
             ganti_halaman("home")
-    with col2:
+    with col3:
         if st.button("Next"):
             ganti_halaman("soal2")
 
+
+# SOAL 2 START
 elif st.session_state.page == "soal2":
     st.title("Soal 2")
+    st.markdown("<div style='font-size:25px;margin-top:15px'>🧠Saat kamu dikasih uang 10 ribu di tengah gurun Sahara, apa yang kamu lakuin?</div>", unsafe_allow_html=True) 
+    #MARKDOWN SETTING RADIO STYLE 
+    st.markdown("""
+    <style>
+    div[data-baseweb="radio"] {
+        margin-top: 15px;       /* Jarak dari atas */
+    }
+    div[data-baseweb="radio"] > div {
+        font-size: 25px;        /* Ukuran teks radio */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    jawaban = st.radio("",["🧃 Beli es teh manis padahal nggak ada warung, tapi kamu yakin bakal muncul sendiri.","🐍 Ngobrol sama ular pasir, tanya dia bisa transfer BCA nggak.","🛸 Lempar uangnya ke langit sambil teriak “AKU SIAP DIPILIH JADI UTUSAN GALAKSI!”"],label_visibility="collapsed")
+    
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        if st.button("Back"):
+            ganti_halaman("soal1")
+    with col3:
+        if st.button("Next"):
+            ganti_halaman("soal3")
+# SOAL 2 END
+
+elif st.session_state.page == "soal3":
+    st.title("Soal 3")
+    st.markdown("<div style='font-size:25px;margin-top:15px'>🧠Saat kamu dikasih uang 10 ribu di tengah gurun Sahara, apa yang kamu lakuin?</div>", unsafe_allow_html=True) 
+    #MARKDOWN SETTING RADIO STYLE 
+    st.markdown("""
+    <style>
+    div[data-baseweb="radio"] {
+        margin-top: 15px;       /* Jarak dari atas */
+    }
+    div[data-baseweb="radio"] > div {
+        font-size: 25px;        /* Ukuran teks radio */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    jawaban = st.radio("",["🧃 Beli es teh manis padahal nggak ada warung, tapi kamu yakin bakal muncul sendiri.","🐍 Ngobrol sama ular pasir, tanya dia bisa transfer BCA nggak.","🛸 Lempar uangnya ke langit sambil teriak “AKU SIAP DIPILIH JADI UTUSAN GALAKSI!”"],label_visibility="collapsed")
+    
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        if st.button("Back"):
+            ganti_halaman("soal2")
+    with col3:
+        if st.button("Next"):
+            ganti_halaman("result")
