@@ -24,18 +24,18 @@ div[data-baseweb="radio"] > div {
 # Halaman HOME
 # ==============================
 if st.session_state.page == "home":
-    st.title("Tebak Khodam Anomali")
+    st.title("Tes Psikologi Seberapa Brainrot kalian")
     st.markdown("""
-    Ini adalah web untuk mencari khodam anomali brainrot yang selama ini diam-diam tinggal di dirimu.
+    Ini adalah web quiz psikologi, untuk menghitung seberapa brainrot kalian
 
     **Cara kerjanya simpel:**
     - 👉 Klik-klik jawab soal survei absurd
-    - 👻 Nanti muncul khodam aneh yang cocok sama energi chaotic-mu
+    - 👻 Nanti kamu akan mendapatkan hasil "SEBERAPA BRAINROT KALIAN"
 
     **✨ Petunjuk:**
     1. Tarik napas pelan.
-    2. Pilih jawaban yang paling absurd menurut bisikan jin lokal.
-    3. Jangan mikir, biar chaos mengalir alami.
+    2. Pilih jawaban yang paling mendekati dengan kalian
+    3. Jangan mikir, pencet aja 
     """)
 
     if st.button("Mulai Survei"):
@@ -46,11 +46,11 @@ if st.session_state.page == "home":
 # ==============================
 elif st.session_state.page == "soal1":
     st.title("SOAL 1")
-    pertanyaan = "🧠Saat kamu dikasih uang 10 ribu di tengah gurun Sahara, apa yang kamu lakuin?"
+    pertanyaan = "🧠Rasa yang lebih kamu suka ?"
     opsi = [
-        "🧃 Beli es teh manis padahal nggak ada warung, tapi kamu yakin bakal muncul sendiri.",
-        "🐍 Ngobrol sama ular pasir, tanya dia bisa transfer BCA nggak.",
-        "🛸 Lempar uangnya ke langit sambil teriak “AKU SIAP DIPILIH JADI UTUSAN GALAKSI!”"
+        "🧃 Manis",
+        "🧂 Pahit",
+        "🌶 Pedas"
     ]
 
     st.markdown(f"<div style='font-size:25px;margin-top:15px'>{pertanyaan}</div>", unsafe_allow_html=True)
@@ -74,11 +74,11 @@ elif st.session_state.page == "soal1":
 # ==============================
 elif st.session_state.page == "soal2":
     st.title("SOAL 2")
-    pertanyaan = "🧠Kalau kamu tiba-tiba nyasar ke dunia anime, reaksi pertama kamu?"
+    pertanyaan = "🧠Lebih prefer ngapain pas libur ?"
     opsi = [
-        "🍜 Cari tukang ramen, siapa tahu Naruto nongol.",
-        "💥 Langsung tantang karakter terkuat biar jadi rival abadi.",
-        "📺 Ngelamar kerja jadi figuran latar biar aman."
+        "🍜 Jalan jalan ke mall",
+        "😴 rebahan di kamar",
+        "💻 Ngoding"
     ]
 
     st.markdown(f"<div style='font-size:25px;margin-top:15px'>{pertanyaan}</div>", unsafe_allow_html=True)
@@ -102,11 +102,11 @@ elif st.session_state.page == "soal2":
 # ==============================
 elif st.session_state.page == "soal3":
     st.title("SOAL 3")
-    pertanyaan = "🧠Kalau kamu bangun tidur dan jadi kecoa, langkah pertama?"
+    pertanyaan = "🧠 Kalau bangun pagi, hal pertama yang kamu lakukan:"
     opsi = [
-        "🪞Cermin dulu. Gaya rambut kecoa kayak apa sih.",
-        "🎭 Bikin drama Shakespeare versi kecoa.",
-        "📞 Telepon teman pakai sinyal antena biar viral di tiktok."
+        "📱 Cek HP",
+        "🛁 Langsung mandi",
+        "😴 Lanjut tidur lagi"
     ]
 
     st.markdown(f"<div style='font-size:25px;margin-top:15px'>{pertanyaan}</div>", unsafe_allow_html=True)
@@ -129,46 +129,73 @@ elif st.session_state.page == "soal3":
 # Halaman Hasil (Result)
 # ==============================
 elif st.session_state.page == "result":
-    st.title("🔮 Hasil Khodam Anomali Kamu 🔮")
+    st.title("🔮 JADI, SEBERAPA BRAINROT KAMU ?")
 
     skor = 0
 
     # Soal 1
-    if st.session_state.soal1 == "🧃 Beli es teh manis padahal nggak ada warung, tapi kamu yakin bakal muncul sendiri.":
+    if st.session_state.soal1 == "🧃 Manis":
         skor += 1
-    elif st.session_state.soal1 == "🐍 Ngobrol sama ular pasir, tanya dia bisa transfer BCA nggak.":
+    elif st.session_state.soal1 == "🧂 Pahit":
         skor += 2
-    elif st.session_state.soal1 == "🛸 Lempar uangnya ke langit sambil teriak “AKU SIAP DIPILIH JADI UTUSAN GALAKSI!”":
+    elif st.session_state.soal1 == "🌶 Pedas":
         skor += 3
 
     # Soal 2
-    if st.session_state.soal2 == "🍜 Cari tukang ramen, siapa tahu Naruto nongol.":
+    if st.session_state.soal2 == "🍜 Jalan jalan ke mall":
         skor += 1
-    elif st.session_state.soal2 == "💥 Langsung tantang karakter terkuat biar jadi rival abadi.":
-        skor += 3
-    elif st.session_state.soal2 == "📺 Ngelamar kerja jadi figuran latar biar aman.":
+    elif st.session_state.soal2 == "😴 rebahan di kamar":
         skor += 2
+    elif st.session_state.soal2 == "💻 Ngoding":
+        skor += 3
 
     # Soal 3
-    if st.session_state.soal3 == "🪞Cermin dulu. Gaya rambut kecoa kayak apa sih.":
-        skor += 1
-    elif st.session_state.soal3 == "🎭 Bikin drama Shakespeare versi kecoa.":
-        skor += 2
-    elif st.session_state.soal3 == "📞 Telepon teman pakai sinyal antena biar viral di tiktok.":
+    if st.session_state.soal3 == "📱 Cek HP":
         skor += 3
+    elif st.session_state.soal3 == "🛁 Langsung mandi":
+        skor += 2
+    elif st.session_state.soal3 == "😴 Lanjut tidur lagi":
+        skor += 1
 
     # Menentukan hasil
     if skor >= 8:
-        khodam = "👹 RAHWANA SI MULTIVERSE"
-        deskripsi = "Kamu adalah raja chaos dari segala realitas. Kehadiranmu menggetarkan semua dimensi."
+        gif = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjlyb2Q1aGF6Y2MyOTgxa2NtMWx1b2RnZDBuYmh5MXJpZjJvbnE2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OVwHlQbBR6vrR2b3PE/giphy.gif"
+        audio = "https://files.catbox.moe/rjn4cf.mp3"
+        audio_html = f"""
+            <audio autoplay loop>
+            <source src="{audio}" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+            """
+        khodam = "LU DAH KENA BRAINROT STADIUM 4"
+        deskripsi = "Taruh dulu hape nya, dan keluar rumah guys"
+
     elif skor >= 5:
-        khodam = "👺 SUTRADARA ASTRAL"
-        deskripsi = "Chaos kamu punya struktur. Kamu tipe pengendali kericuhan dari balik layar."
+        gif = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGE0NjduajhrNzZlNTdpZGNkMTZycThhazdxMWZvemI5M2dkcnFociZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XsNAXQl1E8ig8MHAhf/giphy.gif"
+        audio = "https://files.catbox.moe/lvtu9l.mp3"
+        audio_html = f"""
+            <audio autoplay loop>
+            <source src="{audio}" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+            """
+        khodam = "SELAMAAT ANDA CUMA TERKENA 30% EFEK DARI BRAINROT"
+        deskripsi = "Fokus ke Aktivitas kalian sekarang, jangan tergiur sama konten brainrot yang ada di sosmed"
     else:
-        khodam = "👻 JIN BACKSTAGE"
-        deskripsi = "Tenang tapi nyeleneh. Kamu chaos dengan cara yang nggak disangka-sangka."
+        gif = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGtpMmM4YnVmbnJxY3V1cGowOHo0azBvaGx3bGhpbDhtNGs1NXp6ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DyQrKMpqkAhNHZ1iWe/giphy.gif"
+        audio ="https://files.catbox.moe/m0s4fz.mp3"
+        audio_html = f"""
+            <audio autoplay loop>
+            <source src="{audio}" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+            """
+        khodam = "GG GUYS, KAMUUU JADI SALAH SATU MANUSIA YANG TIDAK TERCEMAR BRAINROT SAMA SEKALI"
+        deskripsi = "Jaga diri kalian, jangan sampai diri kalian tercemar dengan brainrot yang dapat merusak kinerja otak kalian"
 
     # Tampilkan
+    st.markdown(audio_html, unsafe_allow_html=True)
+    st.image(gif)
     st.markdown(f"## {khodam}")
     st.write(deskripsi)
 
