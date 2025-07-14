@@ -46,11 +46,11 @@ if st.session_state.page == "home":
 # ==============================
 elif st.session_state.page == "soal1":
     st.title("SOAL 1")
-    pertanyaan = "🧠Rasa yang lebih kamu suka ?"
+    pertanyaan = "🧠Aplikasi yang paling sering kamu buka di HP ?"
     opsi = [
-        "🧃 Manis",
-        "🧂 Pahit",
-        "🌶 Pedas"
+        "📱 Media sosial",
+        "📄 Notes atau to-do list",
+        "🎮 Game"
     ]
 
     st.markdown(f"<div style='font-size:25px;margin-top:15px'>{pertanyaan}</div>", unsafe_allow_html=True)
@@ -134,12 +134,12 @@ elif st.session_state.page == "result":
     skor = 0
 
     # Soal 1
-    if st.session_state.soal1 == "🧃 Manis":
-        skor += 1
-    elif st.session_state.soal1 == "🧂 Pahit":
-        skor += 2
-    elif st.session_state.soal1 == "🌶 Pedas":
+    if st.session_state.soal1 == "📱 Media sosial":
         skor += 3
+    elif st.session_state.soal1 == "📄 Notes atau to-do list":
+        skor += 1
+    elif st.session_state.soal1 == "🎮 Game":
+        skor += 2
 
     # Soal 2
     if st.session_state.soal2 == "🍜 Jalan jalan ke mall":
@@ -167,7 +167,7 @@ elif st.session_state.page == "result":
             Your browser does not support the audio element.
             </audio>
             """
-        khodam = "LU DAH KENA BRAINROT STADIUM 4"
+        khodam = "OH NOO!!! KAMU DAH KENA BRAINROT STADIUM 4"
         deskripsi = "Taruh dulu hape nya, dan keluar rumah guys"
 
     elif skor >= 5:
