@@ -151,12 +151,16 @@ if st.session_state.soal1 == "📱 Media sosial":
 
 ### Home
 <img width="1899" height="848" alt="image" src="https://github.com/user-attachments/assets/87d205f3-75ee-4200-a1f7-dd27c7d34e3f" />
+
 ### Soal 1
 <img width="1893" height="846" alt="image" src="https://github.com/user-attachments/assets/ca7390b4-c3f3-42ec-a148-d4c42eab3c9e" />
+
 ### Soal 2
 <img width="1919" height="858" alt="image" src="https://github.com/user-attachments/assets/fd7631dc-55de-4e4e-a4b7-933eb4e9f293" />
+
 ### Soal 3
 <img width="1918" height="843" alt="image" src="https://github.com/user-attachments/assets/e3c4e71e-312d-4c5b-a588-a7ff902a31fe" />
+
 ### Result
 <img width="1898" height="853" alt="image" src="https://github.com/user-attachments/assets/13745217-5821-49e3-83d8-763b84fb95dd" />
 <img width="1894" height="849" alt="image" src="https://github.com/user-attachments/assets/d91a5b20-b524-40f0-ad68-5b52569949ff" />
