@@ -1,6 +1,7 @@
 # Tes Psikologi: Seberapa Brainrot Kamu?
 
 Ini adalah aplikasi kuis berbasis web menggunakan **Streamlit**, yang bertujuan untuk mengetahui tingkat "brainrot" seseorang berdasarkan pilihan absurd mereka.
+https://seberapabrainrotlu.streamlit.app/
 
 ---
 
